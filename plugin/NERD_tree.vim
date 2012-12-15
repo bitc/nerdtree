@@ -2613,7 +2613,7 @@ function! s:Path.readInfoFromDisk(fullpath)
     let fullpath = s:Path.WinToUnixPath(a:fullpath)
 
     if getftype(fullpath) ==# "fifo"
-        throw "NERDTree.InvalidFiletypeError: Cant handle FIFO files: " . a:fullpath
+        "throw "NERDTree.InvalidFiletypeError: Cant handle FIFO files: " . a:fullpath
     endif
 
     let self.pathSegments = split(fullpath, '/')
